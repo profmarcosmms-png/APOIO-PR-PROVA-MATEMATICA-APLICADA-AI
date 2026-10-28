@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0369a1">
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>APOIO PRÉ-PROVA MATEMÁTICA</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$'],['\\(','\\)']], displayMath: [['$$','$$']] }, svg: { fontCache: 'global' } };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
+<style>
+:root{
+  --accent:#0284c7; --accent-dark:#0369a1; --hdr1:#e0f2fe; --hdr2:#bae6fd;
+  --bg:#f8fafc; --card:#fff; --text:#1e293b; --border:#e2e8f0;
+  --explain-bg:#fffbeb; --explain-border:#f59e0b; --explain-text:#78350f;
+  --ok-bg:#ecfdf5; --ok-border:#10b981; --ok-text:#065f46;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;margin:0;padding:14px;font-size:16px}
+button,summary,select{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.container{max-width:920px;margin:0 auto}
+
+/* ---------- Cabeçalho ---------- */
+header{background:linear-gradient(135deg,var(--hdr1),var(--hdr2));border:1px solid #7dd3fc;border-radius:16px;padding:16px 20px 14px;margin-bottom:14px;
+  box-shadow:0 4px 15px -3px rgba(3,105,161,.12)}
+.hdr-top{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}
+.logo-wrap{background:#fff;border-radius:12px;padding:8px 14px;display:flex;align-items:center;box-shadow:0 1px 3px rgba(3,105,161,.18)}
+.logo{height:46px;width:auto;display:block}
+.header-texto{min-width:0}
+.eyebrow{display:block;font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-dark);opacity:.8;margin-bottom:3px}
+header h1{margin:0 0 3px;font-size:1.5rem;line-height:1.15;color:var(--accent-dark)}
+header p{margin:0;font-size:.92rem;color:#0c4a6e}
+.aula-badge{background:var(--accent-dark);color:#fff;border-radius:12px;padding:8px 16px;text-align:center;font-weight:800;font-size:1.5rem;line-height:1;min-width:72px;box-shadow:0 2px 6px rgba(3,105,161,.3)}
+.aula-badge small{display:block;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85;margin-bottom:4px}
+header .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:#bae6fd;border:1px solid #bae6fd;border-radius:12px;overflow:hidden;margin:14px 0 0}
+header .info div{background:#f3faff;border:0;border-radius:0;padding:7px 12px}
+.ref{margin:10px 0 0;font-size:.82rem;color:#0c4a6e}
+.ref b{font-weight:700;color:var(--accent-dark)}
+.troca{margin-top:10px}
+.troca summary{cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:6px 14px;font-size:.8rem;font-weight:700;color:var(--accent-dark);
+  background:rgba(255,255,255,.75);border:1px solid #93c5fd;border-radius:20px;list-style:none;user-select:none}
+.troca summary::-webkit-details-marker{display:none}
+.troca summary::before{content:"\21C4"}
+.troca[open] summary{background:#fff}
+.seletor-campos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.troca label{display:block;font-size:.7rem;font-weight:700;color:var(--accent-dark);text-transform:uppercase;letter-spacing:.04em;margin-bottom:3px}
+.troca select{width:100%;min-height:46px;font-size:16px;padding:8px 10px;border:1.5px solid #93c5fd;border-radius:10px;background:#fff;color:var(--text);appearance:auto}
+
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:14px}
+.info div{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 12px;font-size:.86rem}
+.info b{display:block;font-size:.68rem;color:var(--accent-dark);text-transform:uppercase;letter-spacing:.04em}
+
+/* ---------- Blocos de teoria / fórmulas ---------- */
+.bloco{background:var(--card);border:1px solid var(--border);border-left:5px solid var(--accent);border-radius:12px;padding:14px 16px;margin-bottom:14px;overflow-x:auto}
+.bloco h2{margin:0 0 8px;font-size:1.1rem;color:var(--accent-dark)}
+details.bloco summary{cursor:pointer;font-weight:700;color:var(--accent-dark);min-height:32px}
+
+/* ---------- Atividades ---------- */
+.exercise-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.exercise-card h3{margin:0 0 10px;font-size:1.08rem;color:var(--accent-dark)}
+.enunciado{background:#f1f5f9;border-radius:10px;padding:12px 14px;margin-bottom:12px;overflow-x:auto}
+.btn{display:inline-block;background:var(--accent);color:#fff;border:0;border-radius:10px;padding:12px 18px;min-height:46px;font-size:1rem;font-weight:700;cursor:pointer;touch-action:manipulation}
+.btn:active{background:var(--accent-dark)}
+.btn.sec{background:#64748b}
+.progresso{margin-left:10px;font-size:.85rem;color:#475569;font-weight:600}
+.passo{display:none;border-left:4px solid var(--accent);background:var(--solution-bg,#f0f9ff);border-radius:0 10px 10px 0;padding:12px 14px;margin:12px 0;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.passo-n{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:.85rem;margin-right:8px}
+.passo-t{font-weight:700;color:var(--accent-dark)}
+.calc{margin:8px 0;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;max-width:100%}
+.explicacao{background:var(--explain-bg);border-left:4px solid var(--explain-border);color:var(--explain-text);border-radius:0 8px 8px 0;padding:10px 12px;margin-top:8px;font-size:.93rem;overflow-x:auto;max-width:100%}
+.nav-inline{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.resposta{display:none;background:var(--ok-bg);border:2px solid var(--ok-border);color:var(--ok-text);border-radius:12px;padding:12px 14px;margin-top:12px;overflow-x:auto;animation:in .35s ease}
+mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden}
+
+footer{text-align:center;font-size:.8rem;color:#64748b;margin:22px 0 8px}
+
+/* ---------- Celular ---------- */
+@media (max-width:600px){
+  body{padding:8px;padding-left:max(8px,env(safe-area-inset-left));padding-right:max(8px,env(safe-area-inset-right));padding-bottom:max(16px,env(safe-area-inset-bottom))}
+  header{padding:12px 14px}
+  .hdr-top{grid-template-columns:1fr auto;gap:10px 12px}
+  .logo-wrap{grid-column:1;grid-row:1;justify-self:start;padding:6px 12px}
+  .logo{height:36px}
+  .aula-badge{grid-column:2;grid-row:1;font-size:1.25rem;padding:6px 12px;min-width:64px}
+  .header-texto{grid-column:1/-1;grid-row:2}
+  header h1{font-size:1.2rem}
+  header .info{grid-template-columns:1fr 1fr}
+  .seletor-campos{grid-template-columns:1fr}
+  .troca summary{width:100%;justify-content:center}
+  mjx-container{font-size:90%!important}
+  .passo{padding:10px 9px;border-left-width:3px}
+  .passo-n{width:24px;height:24px;font-size:.8rem}
+  .exercise-card{padding:10px}
+  .btn{width:100%}
+  .nav-inline .btn{width:100%}
+  .progresso{display:block;margin:8px 0 0}
+}
+@media (max-width:340px){
+  mjx-container{font-size:82%!important}
+  header h1{font-size:1.1rem}
+}
+@media print{
+  .troca,.btn,.nav-inline{display:none!important}
+  .passo,.resposta{display:block!important;animation:none}
+  body{background:#fff;padding:0}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="hdr-top">
+    <div class="logo-wrap"><img class="logo" alt="SENAI" src="data:image/png;base64,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"></div>
+    <div class="header-texto">
+      <span class="eyebrow" id="h-eyebrow"></span>
+      <h1 id="h-titulo"></h1>
+      <p id="h-sub"></p>
+    </div>
+    <div class="aula-badge" id="h-aula"></div>
+  </div>
+  <div class="info" id="info"></div>
+  <p class="ref" id="h-ref"></p>
+  <details class="troca" id="seletor">
+    <summary>Trocar curso / turma</summary>
+    <div class="seletor-campos">
+      <div><label for="sel-curso">Curso</label><select id="sel-curso"></select></div>
+      <div><label for="sel-turma">Turma</label><select id="sel-turma"></select></div>
+    </div>
+  </details>
+</header>
+<div id="teoria"></div>
+<div id="exercicios"></div>
+<footer id="rodape"></footer>
+</div>
+
+<script>
+const SPEC = {"tipo": "calculo", "titulo": "APOIO PRÉ-PROVA MATEMÁTICA", "subtitulo": "Matemática Aplicada — {curso}", "disciplina": "Matemática Aplicada", "referencia": "Matrizes, estudo da reta, regra de três, sistemas do 1º grau e notação científica", "aula": "Aula 10", "rodape": "Apoio Pré-Prova — Matemática Aplicada — Aula 10 — Prof. Marcos Monteiro", "chave": "matematica-aplicada", "curso_padrao": "ai", "turma_padrao": "ai1", "teoria": [{"titulo": "Matrizes e sistemas lineares (Q01 e Q06)", "recolhivel": true, "html": "\n<p><b>Forma matricial:<\/b> $AX=B$, em que $A$ guarda os coeficientes, $X$ as incógnitas e $B$ os termos independentes.<\/p>\n<p><b>Determinante 2×2:<\/b> $\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=ad-bc$<\/p>\n<p><b>Determinante 3×3 (Laplace, 1ª linha):<\/b> $\\det A=a_{11}\\,C_{11}+a_{12}\\,C_{12}+a_{13}\\,C_{13}$ (também vale Sarrus).<\/p>\n<p><b>Regra de Cramer:<\/b> $x_i=\\dfrac{D_i}{D}$, em que $D=\\det A$ e $D_i$ é o determinante de $A$ com a coluna $i$ trocada por $B$.<\/p>\n<p><b>Classificação:<\/b> $D\\neq 0\\Rightarrow$ solução única. $D=0\\Rightarrow$ infinitas soluções ou nenhuma (equações dependentes ou incompatíveis).<\/p>\n"}, {"titulo": "Estudo analítico da reta (Q02)", "recolhivel": true, "html": "\n<p><b>Coeficiente angular:<\/b> $m=\\dfrac{\\Delta V}{\\Delta T}=\\dfrac{V_2-V_1}{T_2-T_1}$<\/p>\n<p><b>Equação reduzida:<\/b> $V=mT+n$, com $n$ = coeficiente linear (valor de $V$ quando $T=0$).<\/p>\n<p><b>Forma geral:<\/b> $aT+bV+c=0$ (de preferência com coeficientes inteiros).<\/p>\n<p><b>Interseções:<\/b> com o eixo $T$ faça $V=0$; com o eixo $V$ faça $T=0$.<\/p>\n"}, {"titulo": "Regra de três, porcentagem, sistemas e notação científica (Q03, Q04, Q05)", "recolhivel": true, "html": "\n<p><b>Aumento de $p\\%$:<\/b> multiplique por $1+\\frac{p}{100}$. <b>Redução de $p\\%$:<\/b> multiplique por $1-\\frac{p}{100}$.<\/p>\n<p><b>Variação percentual:<\/b> $\\dfrac{\\text{valor novo}-\\text{valor antigo}}{\\text{valor antigo}}\\times 100\\%$<\/p>\n<p><b>Sistema 2×2 por substituição:<\/b> isole uma incógnita em uma equação e substitua na outra.<\/p>\n<p><b>Notação científica:<\/b> $(a\\times10^m)(b\\times10^n)=ab\\times10^{m+n}$ e $(a\\times10^m)^2=a^2\\times10^{2m}$. Conversão: $1\\,\\text{mA}=10^{-3}\\,\\text{A}$.<\/p>\n<p><b>Potência em resistor:<\/b> $P=I^2R$, com $I$ em A e $R$ em $\\Omega$ resulta em W.<\/p>\n"}], "exercicios": [{"titulo": "Questão 1 — Sistema de controle multivariável (Matrizes)", "enunciado": "Em uma célula de manufatura automatizada, vazão ($x$), pressão ($y$) e temperatura ($z$) obedecem, em regime permanente, a\n$$\\begin{cases}2x+y-z=4\\\\ x-y+2z=1\\\\ 3x+2y+z=11\\end{cases}$$\n<b>a)<\/b> Escreva $AX=B$. <b>b)<\/b> Calcule $\\det A$ e analise se há solução única. <b>c)<\/b> Resolva o sistema. <b>d)<\/b> Interprete na prática industrial o caso $\\det A=0$.", "passos": [{"titulo": "a) Alinhar coeficientes de x, y e z", "calculo": "\\begin{cases}2x+1y-1z=4\\\\ 1x-1y+2z=1\\\\ 3x+2y+1z=11\\end{cases}", "porque": "Cada equação vira uma linha da matriz e cada incógnita, uma coluna. Coeficientes 'invisíveis' valem 1 (ou −1): escrevê-los evita erro de sinal."}, {"titulo": "a) Montar AX = B", "calculo": "\\underbrace{\\begin{bmatrix}2&1&-1\\\\1&-1&2\\\\3&2&1\\end{bmatrix}}_{A}\\underbrace{\\begin{bmatrix}x\\\\y\\\\z\\end{bmatrix}}_{X}=\\underbrace{\\begin{bmatrix}4\\\\1\\\\11\\end{bmatrix}}_{B}", "porque": "Multiplicando linha por coluna você recupera exatamente as três equações. Essa é a forma que o controlador (ou o computador) usa para resolver o sistema."}, {"titulo": "b) Calcular det A (Laplace na 1ª linha)", "calculo": "\\det A=2\\begin{vmatrix}-1&2\\\\2&1\\end{vmatrix}-1\\begin{vmatrix}1&2\\\\3&1\\end{vmatrix}+(-1)\\begin{vmatrix}1&-1\\\\3&2\\end{vmatrix}", "porque": "Expandimos pela 1ª linha: cada elemento multiplica o determinante 2×2 que sobra ao tirar sua linha e coluna, com sinais alternados (+, −, +)."}, {"titulo": "b) Resolver os determinantes 2×2", "calculo": "\\begin{gathered}\\det A=2(-1-4)-1(1-6)-1(2+3) \\\\ =-10+5-5=-10\\end{gathered}", "porque": "Em cada 2×2 vale $ad-bc$. O sinal '−' na frente do 2º termo e o $-1$ do 3º elemento são os pontos onde mais se erra."}, {"titulo": "b) Concluir sobre a solução", "calculo": "\\det A=-10\\neq 0\\;\\Rightarrow\\;\\text{solução única}", "porque": "Determinante diferente de zero significa que a matriz tem inversa: existe um, e somente um, conjunto (x, y, z) que satisfaz as três equações."}, {"titulo": "c) Regra de Cramer: calcular Dx, Dy e Dz", "calculo": "\\begin{gathered}D_x=\\begin{vmatrix}4&1&-1\\\\1&-1&2\\\\11&2&1\\end{vmatrix}=-12 \\\\ D_y=\\begin{vmatrix}2&4&-1\\\\1&1&2\\\\3&11&1\\end{vmatrix}=-30 \\\\ D_z=\\begin{vmatrix}2&1&4\\\\1&-1&1\\\\3&2&11\\end{vmatrix}=-14\\end{gathered}", "porque": "Em cada $D_i$ trocamos a coluna da incógnita pela coluna $B$ e calculamos o determinante do mesmo modo (Laplace na 1ª linha). Exemplo para $D_x$: $$\\begin{gathered}D_x=4(-5)-1(1-22)-1(2+11)\\\\ =-20+21-13=-12\\end{gathered}$$"}, {"titulo": "c) Dividir por det A", "calculo": "\\begin{gathered}x=\\dfrac{-12}{-10}=\\dfrac{6}{5}=1{,}2 \\\\ y=\\dfrac{-30}{-10}=3 \\\\ z=\\dfrac{-14}{-10}=\\dfrac{7}{5}=1{,}4\\end{gathered}", "porque": "Cramer diz que cada incógnita é $D_i/D$. Os dois sinais negativos se cancelam, então os valores são positivos."}, {"titulo": "c) Verificar nas três equações", "calculo": "\\begin{gathered}2(1{,}2)+3-1{,}4=4\\;\\checkmark \\\\ 1{,}2-3+2(1{,}4)=1\\;\\checkmark \\\\ 3(1{,}2)+2(3)+1{,}4=11\\;\\checkmark\\end{gathered}", "porque": "Substituir de volta é a prova real: se uma equação não fechar, há erro de conta em algum $D_i$."}, {"titulo": "d) Interpretar det A = 0", "calculo": "\\begin{gathered}\\det A=0\\;\\Rightarrow \\\\ \\text{equações dependentes} \\\\ \\text{ou incompatíveis}\\end{gathered}", "porque": "Com $\\det A=0$ uma malha de controle é combinação das outras (redundante) ou contradiz as demais. Exemplo real: dois sensores medindo a mesma grandeza. Então o sistema não tem ponto de equilíbrio único: o controlador não sabe que valor impor aos atuadores, e a planta perde controlabilidade."}], "resposta": "a) $A=\\begin{bmatrix}2&1&-1\\\\1&-1&2\\\\3&2&1\\end{bmatrix}$, $X=\\begin{bmatrix}x\\\\y\\\\z\\end{bmatrix}$, $B=\\begin{bmatrix}4\\\\1\\\\11\\end{bmatrix}$. b) $\\det A=-10\\neq0$: solução única. c) $x=\\tfrac65=1{,}2$; $y=3$; $z=\\tfrac75=1{,}4$. d) Com $\\det A=0$ não há ponto de operação único: malhas redundantes (infinitas soluções) ou conflitantes (nenhuma)."}, {"titulo": "Questão 2 — Sensor de temperatura linear (Reta)", "enunciado": "Um sensor converte temperatura $T$ (°C) em tensão $V$ (V) de forma linear. Calibração: $T=20\\,°C\\to V=1{,}0\\,V$ e $T=220\\,°C\\to V=5{,}0\\,V$. Faixa de operação: 0 °C a 400 °C.<br>\n<b>a)<\/b> Equação reduzida $V(T)$, coeficientes e significado físico. <b>b)<\/b> Forma geral. <b>c)<\/b> Interseções com os eixos e seu significado. <b>d)<\/b> Temperatura em que o alarme de $7{,}0\\,V$ é acionado.", "passos": [{"titulo": "a) Coeficiente angular", "calculo": "\\begin{gathered}m=\\dfrac{V_2-V_1}{T_2-T_1}=\\dfrac{5-1}{220-20} \\\\ =\\dfrac{4}{200}=0{,}02\\ \\text{V/°C}\\end{gathered}", "porque": "O coeficiente angular mede quanto a tensão varia para cada 1 °C. Cuidado com a ordem: T é o eixo horizontal e V o vertical."}, {"titulo": "a) Coeficiente linear", "calculo": "\\begin{aligned}V&=0{,}02\\,T+n \\\\ 1&=0{,}02(20)+n \\\\ n&=0{,}6\\ \\text{V}\\end{aligned}", "porque": "Usamos um dos pontos de calibração para achar $n$. O outro ponto serve como conferência no próximo passo."}, {"titulo": "a) Equação reduzida e conferência", "calculo": "\\begin{aligned}V(T)&=0{,}02\\,T+0{,}6 \\\\ V(220)&=0{,}02(220)+0{,}6 \\\\ &=5{,}0\\;\\checkmark\\end{aligned}", "porque": "Se o segundo ponto também fechar, a reta está correta, porque duas condições determinam uma reta."}, {"titulo": "a) Significado físico", "calculo": "\\begin{gathered}m=0{,}02\\ \\text{V/°C}=20\\ \\text{mV/°C} \\\\ n=0{,}6\\ \\text{V (em 0 °C)}\\end{gathered}", "porque": "$m$ é a sensibilidade do sensor: 20 mV a mais a cada grau. $n$ é o offset: a tensão que o sensor entrega quando a temperatura é 0 °C."}, {"titulo": "b) Forma geral", "calculo": "\\begin{gathered}0{,}02\\,T-V+0{,}6=0 \\\\ \\downarrow\\ (\\times50) \\\\ T-50V+30=0\\end{gathered}", "porque": "Passamos tudo para um lado e multiplicamos por 50 para eliminar os decimais, ficando com coeficientes inteiros."}, {"titulo": "c) Interseções com os eixos", "calculo": "\\begin{gathered}V=0:\\;T=\\dfrac{-0{,}6}{0{,}02}=-30\\ \\text{°C} \\\\ T=0:\\;V=0{,}6\\ \\text{V}\\end{gathered}", "porque": "Com $V=0$ obtemos onde a reta corta o eixo T; com $T=0$, onde corta o eixo V. Pontos: $(-30;\\,0)$ e $(0;\\,0{,}6)$."}, {"titulo": "c) Significado prático", "calculo": "-30\\,°C\\notin[0;400]\\qquad 0\\,°C\\in[0;400]", "porque": "O ponto $(-30;0)$ está fora da faixa: é só extrapolação matemática, sem significado físico para este sensor. Já $(0;0{,}6)$ é real: é a leitura mínima. Esse 'zero vivo' é prática comum em instrumentação, pois o CLP distingue 0 °C (0,6 V) de fio rompido (0 V)."}, {"titulo": "d) Temperatura do alarme", "calculo": "\\begin{aligned}7{,}0&=0{,}02\\,T+0{,}6 \\\\ T&=\\dfrac{7{,}0-0{,}6}{0{,}02}=320\\ \\text{°C}\\end{aligned}", "porque": "Basta inverter a função: dado $V$, achamos $T$. O alarme dispara quando $V$ ultrapassa 7,0 V, isto é, acima de 320 °C."}, {"titulo": "d) Está na faixa de operação?", "calculo": "\\begin{gathered}0\\le 320\\le 400\\;\\checkmark \\\\ V(400)=0{,}02(400)+0{,}6=8{,}6\\ \\text{V}\\end{gathered}", "porque": "320 °C está dentro da faixa. Na prática o alarme atua 80 °C antes do limite do sensor (8,6 V a 400 °C), o que dá margem de segurança ao forno."}], "resposta": "a) $V(T)=0{,}02\\,T+0{,}6$ ($m=0{,}02$ V/°C = sensibilidade; $n=0{,}6$ V = offset a 0 °C). b) $T-50V+30=0$. c) Interseções: $(-30\\,°C;\\,0)$ (fora da faixa, sem sentido físico) e $(0;\\,0{,}6\\,V)$ (leitura mínima real). d) Alarme em <b>320 °C<\/b>, dentro da faixa 0–400 °C."}, {"titulo": "Questão 3 — Célula de solda robotizada (Regra de três e porcentagem)", "enunciado": "Uma célula produz 480 peças em 8 h, com 5% de refugo. Após a manutenção, a velocidade de produção aumentou 25% e o refugo caiu para 2%. Em uma jornada de 10 h após a manutenção, determine: <b>a)<\/b> total de peças produzidas; <b>b)<\/b> peças boas; <b>c)<\/b> ganho percentual de peças boas por hora em relação à situação anterior. <i>(Consideramos que as 480 peças são o total, boas e defeituosas.)<\/i>", "passos": [{"titulo": "Taxa de produção antes da manutenção", "calculo": "\\dfrac{480\\ \\text{peças}}{8\\ \\text{h}}=60\\ \\text{peças/h}", "porque": "Regra de três: 480 peças estão para 8 h assim como $x$ está para 1 h. Trabalhar com 'peças por hora' deixa as comparações simples."}, {"titulo": "Taxa após o aumento de 25%", "calculo": "60\\times1{,}25=75\\ \\text{peças/h}", "porque": "Aumentar 25% é multiplicar por 1,25. Não some 25 peças: a porcentagem incide sobre o valor original (60)."}, {"titulo": "a) Total na jornada de 10 h", "calculo": "75\\ \\text{peças/h}\\times10\\ \\text{h}=750\\ \\text{peças}", "porque": "Regra de três de novo: 75 peças em 1 h correspondem a 750 peças em 10 h. Esse total inclui boas e defeituosas."}, {"titulo": "b) Refugo e peças boas", "calculo": "\\begin{gathered}\\text{refugo}=750\\times0{,}02=15 \\\\ \\text{boas}=750-15=735\\end{gathered}", "porque": "2% de 750 são as peças descartadas. As boas são o restante. Atalho: $750\\times0{,}98=735$."}, {"titulo": "c) Boas por hora ANTES", "calculo": "60\\times(1-0{,}05)=60\\times0{,}95=57\\ \\text{boas/h}", "porque": "Para comparar, precisamos da produtividade útil (só peças boas) nas duas situações, na mesma base de tempo."}, {"titulo": "c) Boas por hora DEPOIS", "calculo": "\\dfrac{735}{10}=73{,}5\\ \\text{boas/h}", "porque": "Dividimos as 735 peças boas pelas 10 h trabalhadas."}, {"titulo": "c) Ganho percentual", "calculo": "\\dfrac{73{,}5-57}{57}\\times100=\\dfrac{16{,}5}{57}\\times100\\approx28{,}95\\%", "porque": "Variação percentual = (novo − antigo) / antigo. Conferência pelos fatores: $1{,}25\\times0{,}98/0{,}95=1{,}2895$."}, {"titulo": "Por que não é 25%?", "calculo": "\\begin{gathered}\\text{velocidade: }+25\\% \\\\ \\text{refugo: }5\\%\\to2\\% \\\\ \\Rightarrow\\ 28{,}95\\%\\ \\text{de ganho}\\end{gathered}", "porque": "O ganho em peças boas é maior que 25% porque, além de produzir mais, a célula passou a descartar menos. Os dois efeitos se multiplicam, não se somam."}], "resposta": "a) <b>750 peças<\/b>. b) <b>735 peças boas<\/b> (15 refugadas). c) De 57 para 73,5 boas/h: ganho de <b>≈ 28,95%<\/b>."}, {"titulo": "Questão 4 — Dois motores e disjuntores (Sistema do 1º grau)", "enunciado": "Dois motores, M1 e M2, drenam juntos 51 A. A corrente de M1 é o dobro da de M2 mais 3 A. Os disjuntores disponíveis suportam, no máximo, 30 A contínuos por motor. <b>a)<\/b> Monte o sistema. <b>b)<\/b> Resolva. <b>c)<\/b> Avalie se os disjuntores são adequados e, se não forem, proponha uma solução técnica.", "passos": [{"titulo": "a) Definir as variáveis", "calculo": "\\begin{gathered}I_1=\\text{corrente de M1 (A)} \\\\ I_2=\\text{corrente de M2 (A)}\\end{gathered}", "porque": "Nomear as incógnitas com unidade evita confusão entre os dois motores. Sempre defina variáveis antes de escrever equações."}, {"titulo": "a) Traduzir o texto em equações", "calculo": "\\begin{cases}I_1+I_2=51\\\\ I_1=2I_2+3\\end{cases}", "porque": "'Corrente total de 51 A' vira a soma. 'O dobro da de M2 acrescida de 3 A' vira $2I_2+3$."}, {"titulo": "b) Substituição", "calculo": "\\begin{aligned}(2I_2+3)+I_2&=51 \\\\ 3I_2&=48 \\\\ I_2&=16\\ \\text{A}\\end{aligned}", "porque": "Como $I_1$ já está isolado, trocamos na 1ª equação. Sobra uma equação com uma única incógnita."}, {"titulo": "b) Achar I₁ e conferir", "calculo": "I_1=2(16)+3=35\\ \\text{A}\\qquad 35+16=51\\ \\checkmark", "porque": "Voltamos à 2ª equação para obter $I_1$. A soma de volta precisa dar 51 A."}, {"titulo": "c) Comparar com o disjuntor de 30 A", "calculo": "\\begin{gathered}I_2=16\\ \\text{A}<30\\ \\text{A (adequado)} \\\\ I_1=35\\ \\text{A}>30\\ \\text{A (inadequado)}\\end{gathered}", "porque": "O disjuntor deve suportar a corrente normal de operação. Com 35 A em regime, o de 30 A desarmaria indevidamente ou operaria sobrecarregado."}, {"titulo": "c) Solução técnica", "calculo": "\\begin{gathered}\\text{M1: } I_n\\ge 35\\ \\text{A}\\;\\Rightarrow \\\\ \\text{disjuntor comercial de }40\\ \\text{A}\\end{gathered}", "porque": "Trocar o disjuntor de M1 por 40 A, o próximo valor comercial acima de 35 A. É preciso conferir se o cabo suporta 40 A (disjuntor nunca pode proteger menos do que o cabo aguenta). Para o pico de partida, uma partida suave (soft-starter) reduz o estresse."}, {"titulo": "c) Alimentador comum", "calculo": "I_{total}=51\\ \\text{A}\\;\\Rightarrow\\;\\text{geral de }63\\ \\text{A}", "porque": "Se os dois motores saem do mesmo alimentador, o disjuntor geral deve passar de 51 A. M2 pode seguir com 30 A, pois opera com 16 A de folga ampla."}], "resposta": "a) $I_1+I_2=51$ e $I_1=2I_2+3$. b) <b>$I_2=16$ A<\/b> e <b>$I_1=35$ A<\/b>. c) O disjuntor de 30 A serve para M2, mas <b>não<\/b> para M1 (35 A &gt; 30 A). Solução: disjuntor de <b>40 A<\/b> para M1 (conferindo a bitola do cabo), eventualmente com partida suave, e geral acima de 51 A (por ex. 63 A) se houver alimentador comum."}, {"titulo": "Questão 5 — Resistor shunt (Notação científica e potenciação)", "enunciado": "Um resistor shunt tem $R=2{,}5\\times10^{-2}\\,\\Omega$ e a corrente máxima medida é $I=4{,}8\\times10^{3}\\,\\text{mA}$. Sabendo que $P=I^2R$ com $I$ em ampères, qual é a potência dissipada, em W, com três algarismos significativos?<br>\nA) $5{,}76\\times10^{-1}$ W &nbsp; B) $5{,}76\\times10^{5}$ W &nbsp; C) $1{,}20\\times10^{-1}$ W &nbsp; D) $5{,}76\\times10^{-3}$ W", "passos": [{"titulo": "Identificar dados e unidade exigida", "calculo": "\\begin{gathered}R=2{,}5\\times10^{-2}\\,\\Omega \\\\ I=4{,}8\\times10^{3}\\,\\text{mA} \\\\ P=I^2R\\ \\ (I\\ \\text{em A})\\end{gathered}", "porque": "A fórmula só vale no SI. O enunciado dá a corrente em mA e pede ampères: a conversão é o primeiro passo, não um detalhe."}, {"titulo": "Converter mA para A", "calculo": "\\begin{gathered}1\\,\\text{mA}=10^{-3}\\,\\text{A} \\\\ I=4{,}8\\times10^{3}\\times10^{-3}=4{,}8\\ \\text{A}\\end{gathered}", "porque": "Na multiplicação de potências de mesma base somamos os expoentes: $3+(-3)=0$, e $10^0=1$."}, {"titulo": "Elevar a corrente ao quadrado", "calculo": "I^2=(4{,}8)^2=23{,}04=2{,}304\\times10^{1}", "porque": "Elevamos a corrente inteira ao quadrado (e não só o 4). Em notação científica a mantissa fica entre 1 e 10, por isso $23{,}04=2{,}304\\times10^1$."}, {"titulo": "Multiplicar pela resistência", "calculo": "\\begin{gathered}P=2{,}304\\times10^{1}\\times2{,}5\\times10^{-2} \\\\ =(2{,}304\\times2{,}5)\\times10^{1-2}\\end{gathered}", "porque": "Multiplicamos as mantissas entre si e somamos os expoentes das potências de 10."}, {"titulo": "Calcular e arredondar", "calculo": "P=5{,}76\\times10^{-1}\\ \\text{W}=0{,}576\\ \\text{W}", "porque": "$2{,}304\\times2{,}5=5{,}76$ e $10^{1}\\cdot10^{-2}=10^{-1}$. Já tem exatamente três algarismos significativos (5, 7 e 6): alternativa A."}, {"titulo": "Por que as outras alternativas estão erradas?", "calculo": "\\begin{gathered}\\text{B: }(4{,}8\\times10^3)^2\\times R=5{,}76\\times10^5 \\\\ \\text{C: }4{,}8\\times R=1{,}20\\times10^{-1}\\end{gathered}", "porque": "B esquece a conversão de mA para A. C esquece de elevar ao quadrado (usa $I\\cdot R$). D tem expoente incompatível com $10^1\\cdot10^{-2}=10^{-1}$. Cada distrator corresponde a um erro típico."}, {"titulo": "Plausibilidade", "calculo": "P\\approx0{,}58\\ \\text{W}", "porque": "Na prática o shunt deve ter potência nominal acima de 0,576 W (por exemplo, 1 W ou mais) para não superaquecer."}], "resposta": "Alternativa <b>A) $5{,}76\\times10^{-1}$ W<\/b> (≈ 0,576 W)."}, {"titulo": "Questão 6 — Atuadores do braço robótico (Matrizes e Cramer)", "enunciado": "As tensões $v_A$ e $v_B$ (V) dos atuadores satisfazem\n$$\\begin{bmatrix}3&2\\\\1&4\\end{bmatrix}\\begin{bmatrix}v_A\\\\v_B\\end{bmatrix}=\\begin{bmatrix}18\\\\16\\end{bmatrix}$$\n<b>a)<\/b> Calcule o determinante e analise a solução única. <b>b)<\/b> Determine $v_A$ e $v_B$ (Cramer ou inversa). <b>c)<\/b> O que significaria $\\det=0$, relacionando a sistemas lineares dependentes?", "passos": [{"titulo": "Traduzir a equação matricial em equações", "calculo": "\\begin{cases}3v_A+2v_B=18\\\\ v_A+4v_B=16\\end{cases}", "porque": "Multiplicar linha por coluna reconstrói o sistema. Ver o sistema escrito ajuda a conferir a resposta no final."}, {"titulo": "a) Determinante da matriz de ganhos", "calculo": "\\det A=3\\cdot4-2\\cdot1=12-2=10", "porque": "Em 2×2 o determinante é produto da diagonal principal menos produto da diagonal secundária."}, {"titulo": "a) Existe solução única?", "calculo": "\\det A=10\\neq0\\;\\Rightarrow\\;\\text{solução única}", "porque": "Determinante não nulo significa matriz invertível: cada posição desejada corresponde a um único par de tensões."}, {"titulo": "b) Cramer para vA", "calculo": "\\begin{gathered}D_{v_A}=\\begin{vmatrix}18&2\\\\16&4\\end{vmatrix}=72-32=40 \\\\ v_A=\\dfrac{40}{10}=4\\ \\text{V}\\end{gathered}", "porque": "Trocamos a 1ª coluna (coeficientes de $v_A$) pela coluna $B$ e dividimos por $\\det A$."}, {"titulo": "b) Cramer para vB", "calculo": "\\begin{gathered}D_{v_B}=\\begin{vmatrix}3&18\\\\1&16\\end{vmatrix}=48-18=30 \\\\ v_B=\\dfrac{30}{10}=3\\ \\text{V}\\end{gathered}", "porque": "Agora a troca é na 2ª coluna (coeficientes de $v_B$)."}, {"titulo": "b) Conferir (e método alternativo: inversa)", "calculo": "\\begin{gathered}3(4)+2(3)=18\\ \\checkmark \\\\ 4+4(3)=16\\ \\checkmark \\\\ A^{-1}=\\tfrac1{10}\\begin{bmatrix}4&-2\\\\-1&3\\end{bmatrix} \\\\ A^{-1}B=\\tfrac1{10}\\begin{bmatrix}40\\\\30\\end{bmatrix}=\\begin{bmatrix}4\\\\3\\end{bmatrix}\\end{gathered}", "porque": "A inversa de uma 2×2 troca os elementos da diagonal principal, muda o sinal da secundária e divide por $\\det A$. Chega ao mesmo resultado."}, {"titulo": "c) Significado de det = 0", "calculo": "\\begin{gathered}\\det A=0 \\\\ \\Rightarrow\\ \\text{linhas proporcionais} \\\\ \\Rightarrow\\ \\text{sistema dependente} \\\\ \\text{ou incompatível}\\end{gathered}", "porque": "Se uma linha é múltipla da outra, a 2ª equação não traz informação nova. Exemplo: $3v_A+2v_B=18$ e $6v_A+4v_B=36$ têm infinitas soluções; com $6v_A+4v_B=30$ não há nenhuma. No robô, os dois atuadores atuam na mesma direção (singularidade): perde-se um grau de liberdade e o controlador não consegue calcular tensões únicas para a posição desejada."}], "resposta": "a) $\\det A=10\\neq0$: solução única. b) <b>$v_A=4$ V<\/b> e <b>$v_B=3$ V<\/b>. c) Com $\\det A=0$ as equações são dependentes (infinitas soluções) ou incompatíveis (nenhuma): o controlador perde a capacidade de definir tensões únicas para a posição desejada."}]};
+const TURMAS = {"instituicao": "SENAI", "setor": "Coordenação Pedagógica", "cursos": [{"id": "pq", "nome": "Tecnólogo em Processos Químicos", "turmas": [{"id": "pq3", "nome": "3º Período", "docente": "Prof. Marcos Monteiro"}, {"id": "pq1", "nome": "1º Período", "docente": "Prof. Marcos Monteiro"}]}, {"id": "ai", "nome": "Automação Industrial", "turmas": [{"id": "ai1", "nome": "1º Período", "docente": "Prof. Marcos Monteiro"}]}]};
+
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const $ = id => document.getElementById(id);
+const store = { get(k){ try{return localStorage.getItem(k)}catch(e){return null} }, set(k,v){ try{localStorage.setItem(k,v)}catch(e){} } };
+const key = 'apoio-' + (SPEC.chave || SPEC.tipo || 'x');
+
+function typeset(el){ if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(el ? [el] : undefined).catch(()=>{}); }
+
+/* ---------- Curso / turma ---------- */
+function curso(){ return TURMAS.cursos.find(c => c.id === $('sel-curso').value) || TURMAS.cursos[0]; }
+function turma(){ const c = curso(); return c.turmas.find(t => t.id === $('sel-turma').value) || c.turmas[0]; }
+
+function preencherTurmas(preferida){
+  const c = curso(), s = $('sel-turma');
+  s.innerHTML = c.turmas.map(t => `<option value="${esc(t.id)}">${esc(t.nome)}</option>`).join('');
+  if (preferida && c.turmas.some(t => t.id === preferida)) s.value = preferida;
+}
+
+function atualizarCabecalho(){
+  const c = curso(), t = turma();
+  store.set(key + '-curso', c.id); store.set(key + '-turma', t.id);
+  $('h-eyebrow').textContent = [TURMAS.instituicao, TURMAS.setor].filter(Boolean).join(' · ');
+  $('h-titulo').textContent = SPEC.titulo;
+  $('h-sub').textContent = SPEC.subtitulo.replace('{curso}', c.nome);
+  const m = /^(.*?)\s*(\d+\S*)$/.exec(SPEC.aula || '');
+  $('h-aula').innerHTML = m ? `<small>${esc(m[1] || 'Aula')}</small>${esc(m[2])}` : esc(SPEC.aula || '');
+  $('h-aula').style.display = SPEC.aula ? '' : 'none';
+  const campos = [
+    ['Curso', c.nome], ['Turma', t.nome], ['Docente', t.docente || SPEC.docente || ''], ['Disciplina', SPEC.disciplina || '']
+  ].filter(x => x[1]);
+  $('info').innerHTML = campos.map(x => `<div><b>${esc(x[0])}</b>${esc(x[1])}</div>`).join('');
+  $('h-ref').innerHTML = SPEC.referencia ? `<b>Conteúdo:</b> ${esc(SPEC.referencia)}` : '';
+  document.title = `${SPEC.titulo} — ${t.nome}`;
+}
+
+function iniciarSeletor(){
+  $('sel-curso').innerHTML = TURMAS.cursos.map(c => `<option value="${esc(c.id)}">${esc(c.nome)}</option>`).join('');
+  const q = new URLSearchParams(location.search);
+  const cs = q.get('curso') || store.get(key + '-curso') || SPEC.curso_padrao;
+  if (cs && TURMAS.cursos.some(c => c.id === cs)) $('sel-curso').value = cs;
+  preencherTurmas(q.get('turma') || store.get(key + '-turma') || SPEC.turma_padrao);
+  $('sel-curso').addEventListener('change', () => { preencherTurmas(); atualizarCabecalho(); });
+  $('sel-turma').addEventListener('change', atualizarCabecalho);
+  if (TURMAS.cursos.length === 1 && TURMAS.cursos[0].turmas.length === 1) $('seletor').style.display = 'none';
+  atualizarCabecalho();
+}
+
+/* ---------- Teoria (formulário, deduções) ---------- */
+function renderTeoria(){
+  $('teoria').innerHTML = (SPEC.teoria || []).map(b => b.recolhivel
+    ? `<details class="bloco"><summary>${esc(b.titulo)}</summary><div>${b.html}</div></details>`
+    : `<div class="bloco"><h2>${esc(b.titulo)}</h2>${b.html}</div>`).join('');
+}
+
+/* ---------- Atividades passo a passo ---------- */
+function renderExercicios(){
+  $('exercicios').innerHTML = SPEC.exercicios.map((ex, i) => {
+    const id = 'ex' + (i + 1), n = ex.passos.length;
+    const passos = ex.passos.map((p, j) => `
+      <div class="passo" id="${id}-passo-${j+1}">
+        <span class="passo-n">${j+1}</span><span class="passo-t">${esc(p.titulo)}</span>
+        <div class="calc">${p.calculo ? '$$' + esc(p.calculo) + '$$' : ''}</div>
+        ${p.porque ? `<div class="explicacao"><strong>Por que fazemos isso:</strong> ${p.porque}</div>` : ''}
+      </div>`).join('');
+    return `
+    <section class="exercise-card" id="${id}">
+      <h3>${esc(ex.titulo)}</h3>
+      <div class="enunciado">${ex.enunciado}</div>
+      <div class="controle" id="${id}-controle">
+        <button class="btn" id="${id}-btn-topo" onclick="iniciar('${id}',${n})">▶ Ver resolução passo a passo</button>
+        <span class="progresso" id="${id}-progresso"></span>
+      </div>
+      <div id="${id}-passos">${passos}
+        <div class="resposta" id="${id}-resposta"><strong>✅ Resposta final:</strong> ${ex.resposta}</div>
+      </div>
+    </section>`;
+  }).join('');
+  $('rodape').textContent = SPEC.rodape || '';
+}
+
+function iniciar(id, n){ $(id + '-btn-topo').style.display = 'none'; revelar(id, n, 1); }
+
+function revelar(id, n, k){
+  const passo = $(`${id}-passo-${k}`);
+  passo.style.display = 'block';
+  const antigo = passo.parentElement.querySelector('.nav-inline'); if (antigo) antigo.remove();
+  const nav = document.createElement('div'); nav.className = 'nav-inline';
+  if (k < n) {
+    nav.innerHTML = `<button class="btn" onclick="revelar('${id}',${n},${k+1})">▶ Próximo passo (${k+1} de ${n})</button>`;
+  } else {
+    $(id + '-resposta').style.display = 'block';
+    nav.innerHTML = `<button class="btn sec" onclick="reiniciar('${id}',${n})">🔄 Reiniciar resolução</button>`;
+  }
+  // o botão fica DENTRO do passo atual: não precisa rolar para avançar
+  passo.appendChild(nav);
+  // remove o botão do passo anterior
+  if (k > 1) { const ant = $(`${id}-passo-${k-1}`).querySelector('.nav-inline'); if (ant) ant.remove(); }
+  $(id + '-progresso').textContent = `Passo ${k} de ${n}`;
+  typeset(passo); if (k === n) typeset($(id + '-resposta'));
+  passo.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+function reiniciar(id, n){
+  for (let k = 1; k <= n; k++) { const p = $(`${id}-passo-${k}`); p.style.display = 'none'; const nv = p.querySelector('.nav-inline'); if (nv) nv.remove(); }
+  $(id + '-resposta').style.display = 'none';
+  $(id + '-progresso').textContent = '';
+  $(id + '-btn-topo').style.display = '';
+  $(id).scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+iniciarSeletor(); renderTeoria(); renderExercicios();
+window.addEventListener('load', () => typeset());
+</script>
+</body>
+</html>
